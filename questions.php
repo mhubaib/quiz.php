@@ -10,6 +10,16 @@ $questions = [
         'options' => ["Mars", "Venus", "Jupiter", "Saturn"],
         'correct' => "0",
     ],
+    [
+        'question' => "What is the largest mammal in the world?",
+        'options' => ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+        'correct' => "1",
+    ],
+    [
+        'question' => "Which gas do plants absorb from the atmosphere?",
+        'options' => ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        'correct' => "1",
+    ],
 ];
 ?>
 
