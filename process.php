@@ -33,17 +33,17 @@ if ($percentage >= 80) {
     <h2>Quiz Results</h2>
     <p>You scored <?php echo $score; ?> out of <?php echo $totalQuestions; ?> (<?php echo number_format($percentage, 1); ?>%)</p>
     <p><strong><?php echo $resultMessage; ?></strong></p>
-    
+
     <h3>Question Review:</h3>
     <?php foreach ($questions as $index => $q): ?>
         <div class="question">
             <h4><?php echo ($index + 1) . '. ' . $q['question']; ?></h4>
             <p>
-                Your answer: 
-                <?php 
+                Your answer:
+                <?php
                 if (isset($userAnswers[$index])) {
                     echo $q['options'][(int)$userAnswers[$index]];
-                    
+
                     if ((int)$userAnswers[$index] == $q['correct']) {
                         echo ' <span style="color: green;">(Correct)</span>';
                     } else {
@@ -57,6 +57,6 @@ if ($percentage >= 80) {
             <p>Correct answer: <?php echo $q['options'][$q['correct']]; ?></p>
         </div>
     <?php endforeach; ?>
-    
+
     <a href="index.php" class="btn" style="display: inline-block; margin-top: 20px; text-decoration: none;">Try Again</a>
 </div>
